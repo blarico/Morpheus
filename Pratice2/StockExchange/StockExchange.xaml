@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>734,2210</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>734,2308.66666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GoogleTackExercise_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -36,7 +36,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="18">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -55,9 +55,10 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GoogleTackExercise" sap:VirtualizedContainerService.HintSize="714,2110" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GoogleTackExercise" sap:VirtualizedContainerService.HintSize="714,2208.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="GoogleSearchExist" />
     </Sequence.Variables>
@@ -68,10 +69,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:UiElementExists DisplayName="Element Exists search bar " Exists="[GoogleSearchExist]" sap:VirtualizedContainerService.HintSize="672,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
       <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5330f0e98569dbe37ceeea6018473636" Selector="&lt;html title='Google' /&gt;&lt;webctrl tag='svg' /&gt;">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5330f0e98569dbe37ceeea6018473636" Selector="&lt;html title='Google' /&gt;&lt;webctrl tag='svg' /&gt;" TimeoutMS="5000">
           <ui:Target.WaitForReady>
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
@@ -88,9 +86,9 @@
         <Throw Exception="[new BusinessRuleException(&quot;The input stock name was blank or empty, please enter a stock name&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
       </If.Then>
     </If>
-    <If Condition="[in_StockName.Length &lt; 3 or in_StockName.Length &gt; 4]" DisplayName="If length of in_StockName less than 3 or more than 4" sap:VirtualizedContainerService.HintSize="672,1364" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[in_StockName.Length &lt; 3 or in_StockName.Length &gt; 4]" DisplayName="If length of in_StockName less than 3 or more than 4" sap:VirtualizedContainerService.HintSize="672,1462.66666666667" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="526,1210" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="526,1308.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="StockInfoExist" />
             <Variable x:TypeArguments="x:String" Default=" stock price" Name="GoogleSearchStockPrice" />
@@ -112,12 +110,10 @@
               </ui:Target>
             </ui:TypeInto.Target>
           </ui:TypeInto>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="484,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Close internet explorer&quot;]" />
           <ui:UiElementExists DisplayName="Element Exists stock exchange window" Exists="[StockInfoExist]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
             <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6c698b71d06b484bd571a2e823f4f287" Selector="&lt;html title='* - Google Search' /&gt;&lt;webctrl idx='1' parentid='knowledge-finance-wholepage__entity-summary' tag='DIV' /&gt;">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6c698b71d06b484bd571a2e823f4f287" Selector="&lt;html title='* - Google Search' /&gt;&lt;webctrl idx='1' parentid='knowledge-finance-wholepage__entity-summary' tag='DIV' /&gt;" TimeoutMS="5000">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
