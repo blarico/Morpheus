@@ -93,6 +93,7 @@
         <Sequence sap:VirtualizedContainerService.HintSize="526,1210" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="StockInfoExist" />
+            <Variable x:TypeArguments="x:String" Default=" stock price" Name="GoogleSearchStockPrice" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -113,7 +114,7 @@
           </ui:TypeInto>
           <ui:UiElementExists DisplayName="Element Exists stock exchange window" Exists="[StockInfoExist]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
             <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6c698b71d06b484bd571a2e823f4f287" Selector="&lt;html title='* stock price - Google Search' /&gt;&lt;webctrl idx='1' parentid='knowledge-finance-wholepage__entity-summary' tag='DIV' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6c698b71d06b484bd571a2e823f4f287" Selector="&lt;html title='* - Google Search' /&gt;&lt;webctrl idx='1' parentid='knowledge-finance-wholepage__entity-summary' tag='DIV' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -130,7 +131,7 @@
           </If>
           <ui:SetFocus DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Set Focus open" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="SetFocus_1">
             <ui:SetFocus.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="aa2aabee20da159243dded5aedc1fee2" Selector="&lt;html title='* stock price - Google Search' /&gt;&lt;webctrl idx='1' tag='TABLE' /&gt;&lt;webctrl idx='1' tag='TD' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="aa2aabee20da159243dded5aedc1fee2" Selector="&lt;html title='* - Google Search' /&gt;&lt;webctrl idx='1' tag='TABLE' /&gt;&lt;webctrl idx='1' tag='TD' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -142,7 +143,7 @@
           </ui:SetFocus>
           <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text open" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
             <ui:GetValue.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bc7be35aa846b48dffbc2f60ab7c72ad" Selector="&lt;html title='* stock price - Google Search' /&gt;&lt;webctrl idx='1' tag='TABLE' /&gt;&lt;webctrl idx='1' tableCol='2' tag='TD' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bc7be35aa846b48dffbc2f60ab7c72ad" Selector="&lt;html title='* - Google Search' /&gt;&lt;webctrl idx='1' tag='TABLE' /&gt;&lt;webctrl idx='1' tableCol='2' tag='TD' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -157,7 +158,7 @@
           </ui:GetValue>
           <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text high" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
             <ui:GetValue.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0068a1a4edbe277846251a090e3b00ea" Selector="&lt;html title='* stock price - Google Search' /&gt;&lt;webctrl idx='1' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='2' tag='TD' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0068a1a4edbe277846251a090e3b00ea" Selector="&lt;html title='* - Google Search' /&gt;&lt;webctrl idx='1' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='2' tag='TD' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -172,7 +173,7 @@
           </ui:GetValue>
           <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text low" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_3">
             <ui:GetValue.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="16635ce1312fa682c11be0836ee61a2b" Selector="&lt;html title='* stock price - Google Search' /&gt;&lt;webctrl idx='1' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='3' tag='TD' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="16635ce1312fa682c11be0836ee61a2b" Selector="&lt;html title='* - Google Search' /&gt;&lt;webctrl idx='1' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='3' tag='TD' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
