@@ -131,7 +131,9 @@
           <Transition.Action>
             <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[Counter.ToString + &quot;is not a valid value&quot;]" />
           </Transition.Action>
-          <Transition.Condition>[Counter &lt;&gt; 0 or Counter &lt;&gt; 1]</Transition.Condition>
+          <Transition.Condition>
+            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Counter &lt;&gt; 0 or Counter &lt;&gt; 1" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_3" />
+          </Transition.Condition>
         </Transition>
       </State.Transitions>
       <State.Variables>
